@@ -1,0 +1,26 @@
+{
+  "name": "gitter-demo-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "request": "~2.27.0",
+    "express": "~3.4.4",
+    "jade": "~0.35.0",
+    "passport": "~0.2.0",
+    "passport-oauth2": "~1.1.1"
+  },
+  "devDependencies": {
+    "@gitlab/eslint-config": "^1.6.0",
+    "eslint": "^5.3.0",
+    "mocha": "",
+    "nodemon": "~1.0.15",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "validate": "eslint . && prettier --check '**/*.js'",
+    "validate-fix": "eslint --fix . && prettier --write '**/*.js'",
+    "pretest": "make restart-test-server",
+    "test": "NODE_ENV=test mocha",
+    "posttest": "make stop-test-server"
+  }
+}

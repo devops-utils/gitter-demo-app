@@ -1,0 +1,12 @@
+stages:
+  - test
+
+validate:
+  image: node:10
+  stage: test
+  script:
+    - npm i
+    - npm run validate
+  tags:
+    - docker
+    - shared
